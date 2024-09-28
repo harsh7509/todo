@@ -1,7 +1,7 @@
 "use client"; // Ensures the component runs on the client-side
 
 import { useRecoilState } from 'recoil';
-import { todoListState } from '../atoms/todoAtom'; // Adjust path accordingly
+import { todoListState } from '../State/todoState'; // Adjust path accordingly
 import { useState, useEffect } from 'react';
 import styles from '../styles/TodoList.module.css'; 
 
@@ -101,42 +101,45 @@ const TodoList = () => {
             <div className={styles.form}>
                 <input 
                     type="text" 
+                    className={styles.inputField} // Added className for input
                     value={newTask} 
                     onChange={(e) => setNewTask(e.target.value)} 
                     placeholder="Enter new task"
-                    className={styles.inputField}
                 />
                 <input
                     type="text"
+                    className={styles.inputField} // Added className for input
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     placeholder="Enter description"
-                    className={styles.inputField}
                 />
                 <input 
                     type="date"
+                    className={styles.inputField} // Added className for input
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
-                    className={styles.inputField}
                 />
                 <select   
+                    className={styles.inputField} // Added className for select
                     value={priority}
                     onChange={(e) => setPriority(e.target.value)}
-                    className={styles.inputField}
                 >
                     <option value="">Select Priority</option>
                     <option value="low">Low</option>
                     <option value="medium">Medium</option>
                     <option value="high">High</option>
                 </select>
-                <button id={styles.addtask} onClick={addTodo} disabled={!newTask || !date}>
+                <button 
+                    className={styles.button} // Added className for button
+                    onClick={addTodo} 
+                    disabled={!newTask || !date}
+                >
                     {editIndex !== null ? 'Update Task' : 'Add Task'}
-                    
                 </button> {/* Change button text based on edit mode */}
             </div>
             <ul>
                 {todos.map((todo, index) => (
-                    <li key={index} className={todo.completed ? styles.completed : ''}>
+                    <li key={index} className={`${styles.todoItem} ${todo.completed ? styles.completed : ''}`}>
                         <div>
                             <strong>Task:</strong> {todo.task}
                         </div>
@@ -149,11 +152,24 @@ const TodoList = () => {
                         <div>
                             <strong>Priority:</strong> {todo.priority}
                         </div>
-                        <button className={styles.completeButton} onClick={() => markAsCompleted(index)}>
+                        <button 
+                            className={styles.completeButton} // Updated button class
+                            onClick={() => markAsCompleted(index)}
+                        >
                             {todo.completed ? 'Undo' : 'Complete'}
                         </button>
-                        <button className={styles.completeButton} onClick={() => deleteTask(index)}>Delete</button>
-                        <button className={styles.completeButton} onClick={() => editTask(index)}>Edit</button>
+                        <button 
+                            className={styles.deleteButton} // Updated button class
+                            onClick={() => deleteTask(index)}
+                        >
+                            Delete
+                        </button>
+                        <button 
+                            className={styles.editButton} // Updated button class
+                            onClick={() => editTask(index)}
+                        >
+                            Edit
+                        </button>
                     </li>
                 ))}
             </ul>

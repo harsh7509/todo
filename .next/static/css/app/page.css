@@ -1,0 +1,173 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./styles/TodoList.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+/* Container for the Todo List */
+.TodoList_todoContainer__NlwNB {
+    max-width: 90vw;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f9; /* Soft light background */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border: none;
+}
+
+/* Title styling */
+.TodoList_title__Ccd4N {
+    text-align: center;
+    font-size: 28px; /* Larger font */
+    color: #333; /* Darker text */
+    margin-bottom: 20px;
+    font-weight: 700; /* Bold title */
+    letter-spacing: 1px; /* Slight spacing */
+}
+
+/* Form styling */
+.TodoList_form__VNZc3 {
+    display: grid; /* Grid layout for better alignment */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Four equal columns */
+    gap: 20px; /* More space between elements */
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+/* Input field styling */
+.TodoList_inputField__tS5uV {
+    padding: 10px;
+    border: 2px solid #ccc; /* Light border */
+    border-radius: 8px; /* Smooth edges */
+    font-size: 16px; /* Larger input font */
+    transition: border-color 0.3s ease;
+    background-color: #fff; /* Clean white background */
+    color: #333; /* Darker text */
+}
+#TodoList_addtask___f0NT{
+    padding: 10px;
+    border: 2px solid #ccc; /* Light border */
+    border-radius: 8px; /* Smooth edges */
+    font-size: 16px; /* Larger input font */
+    transition: border-color 0.3s ease;
+    background-color: #fff; /* Clean white background */
+    color: #333; /* Darker text */
+    justify-content: center;
+    padding-left: 55px;
+}
+
+/* Focus style for input fields */
+.TodoList_inputField__tS5uV:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none;
+}
+
+/* Button styling */
+.TodoList_button__vL_Ed {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px; /* More rounded corners */
+    font-size: 16px; /* Larger font for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full-width buttons */
+    font-weight: 500;
+    text-transform: uppercase; /* Uppercase text for a modern look */
+}
+
+/* Button hover effect */
+.TodoList_button__vL_Ed:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Todo item styling */
+.TodoList_todoItem__6QXe9 {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth animations */
+    border-left: 5px solid #007bff; /* Colored border for priority */
+}
+
+/* Change background and elevation on hover for todo items */
+.TodoList_todoItem__6QXe9:hover {
+    background-color: #f9f9ff; /* Slightly lighter on hover */
+    transform: scale(1.02); /* Slight scale on hover */
+}
+
+/* Styling for completed items */
+.TodoList_completed___vsj5 {
+    text-decoration: line-through;
+    color: #888; /* Light gray for completed tasks */
+    opacity: 0.6; /* Faded effect */
+}
+
+/* Complete and delete button styling */
+.TodoList_completeButton__1yiyW, .TodoList_deleteButton__kVBKO {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-right: 10px; /* Space between buttons */
+}
+
+.TodoList_completeButton__1yiyW {
+    background-color: #28a745; /* Green for complete */
+    color: white;
+}
+
+.TodoList_completeButton__1yiyW:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.TodoList_deleteButton__kVBKO {
+    background-color: #ff4d4d; /* Red for delete */
+    color: white;
+}
+
+.TodoList_deleteButton__kVBKO:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+/* Footer styling */
+.TodoList_footer__0Xlgv {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+    opacity: 0.7; /* Slightly faded text */
+}
+
+/* Error message styling */
+.TodoList_error__r6wNe {
+    color: #e74c3c; /* Red for error message */
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .TodoList_form__VNZc3 {
+        grid-template-columns: 1fr;
+    }
+
+    .TodoList_button__vL_Ed {
+        width: 100%; /* Full width on smaller screens */
+        margin-top: 10px;
+    }
+
+    .TodoList_todoContainer__NlwNB {
+        padding: 15px;
+    }
+
+    .TodoList_todoItem__6QXe9 {
+        padding: 15px;
+    }
+}
+
